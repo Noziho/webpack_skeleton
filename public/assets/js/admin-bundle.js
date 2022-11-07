@@ -1,0 +1,1 @@
+(()=>{"use strict";const e={name:"john",age:"32",describe:()=>{console.log(`Hello ${e.name} vous avez ${e.age} ans.`)}};e.describe(),console.log({name:"jane",age:"64"})})();
