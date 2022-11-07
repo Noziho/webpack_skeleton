@@ -8,8 +8,6 @@
     <title>Document</title>
 </head>
 <body>
-
-<script src="/assets/js/admin-bundle.js"></script>
 <script src="/assets/js/front-bundle.js"></script>
 </body>
 </html>

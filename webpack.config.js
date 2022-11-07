@@ -13,4 +13,13 @@ module.exports = {
         path: path.resolve(__dirname, 'public/assets/js'),
         filename: "[name]-bundle.js"
     },
+
+    module: {
+        rules: [
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+            }
+        ]
+    }
 }
