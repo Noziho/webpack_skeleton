@@ -1,3 +1,7 @@
+@import "toto.css";
+
 body {
     background: indianred;
+    background: url("../img/images2.jpg");
+
 }
