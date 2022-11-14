@@ -1,7 +1,5 @@
 @import "toto.css";
 
 body {
-    background: indianred;
-    background: url("../img/images22.jpg");
-
+    background-image: url("../img/images22.jpg");
 }

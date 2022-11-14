@@ -10,7 +10,6 @@
 </head>
 <body>
     <h1>A4A4</h1>
-    <img src="/build/img/images2.jpg" alt="IMG">
 <script src="/build/js/front-bundle.js"></script>
 </body>
 </html>

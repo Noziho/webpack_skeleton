@@ -2,8 +2,6 @@ const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
-
 
 module.exports = {
     //Point d'entrée JS, fichier qui contiendra les includes.
@@ -15,7 +13,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'public/build'),
         filename: "./js/[name]-bundle.js",
-        publicPath: '',
+        publicPath: '/build/',
     },
 
     module: {
@@ -30,7 +28,6 @@ module.exports = {
                         loader: "css-loader",
                         options: {
                             import: true,
-                            url: false,
                             sourceMap: true,
                         },
                     },
@@ -38,16 +35,10 @@ module.exports = {
             },
             {
                 test: /\.(png|jpe?g|gif)$/i,
-                use: [
-                    {
-                        loader: "file-loader",
-                        options: {
-                            name: "[name].[ext]",
-                            outputPath: 'img/',
-                            publicPath: 'build/img',
-                        }
-                    },
-                ]
+                type: 'asset/resource',
+                generator: {
+                    filename: 'img/[name][ext]',
+                }
             },
         ],
     },
@@ -61,12 +52,6 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: "./css/[name].css",
-        }),
-
-        new CopyPlugin({
-           patterns: [
-               { from: 'assets/img/', to: 'img/',}
-           ]
         }),
     ]
 }
