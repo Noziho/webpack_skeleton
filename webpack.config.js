@@ -11,8 +11,8 @@ module.exports = (env, argv) => {
     return {
         //Point d'entrée JS, fichier qui contiendra les includes.
         entry: {
-            front: './assets/js/front/main.js',
-            admin: './assets/js/admin/main.js',
+            app: './assets/js/front/app.js',
+
         },
         //Objet contenant le chemin de sortie, ainsi que le nom à donner au fichier
         output: {
